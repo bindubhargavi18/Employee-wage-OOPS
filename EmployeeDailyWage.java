@@ -1,8 +1,8 @@
 class EmployeeDailyWage
 {
 	private int wagehr=20,dayhrs=8,dailywage;
-	private int dayspermonth=20,wagepermonth,maxhrs=100,workingdays=20;
-	private int totalhr=0,totaldays=0;
+	private int dayspermonth=20,wagepermonth,maxhrs=100,workingdays=20;   // oops concept is encapsulation....
+	private int totalhr=0,totaldays=0;									 // wrapping all data into one class
 	private int emp=(int)Math.floor(Math.random()*10)%3;
 	public void calWages()
 	{		
