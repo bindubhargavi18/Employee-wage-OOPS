@@ -1,26 +1,21 @@
 class EmployeeDailyWage
 {
-	private int fulltime=1;
-	private int parttime=2,wagehr=20,dayhrs=8,dailywage,parttimehrs=4;
-	private double emp=Math.floor(Math.random()*10)%3;
+	private int wagehr=20,dayhrs=8,dailywage,parttimehrs=4;
+	private int emp=(int)Math.floor(Math.random()*10)%3;
 	public void dailyWageCal()
 	{		
-		if (emp==fulltime)
+		switch(emp)
 		{
-			System.out.println("Employee is fulltime");
-			dailywage=wagehr*dayhrs;
-			System.out.println("Fulltime employee salary:"+dailywage);
-		}
-		else if(emp==parttime)
-		{
-			System.out.println("Employee is parttime");
-			dailywage=wagehr*parttimehrs;
-			System.out.println("Parttime employee salary:"+dailywage);
-		}
-		else
-		{
-			System.out.println("Employee is absent");
-			System.out.println("Salary is 0");
+			case 1:
+			 	dailywage=wagehr*dayhrs;
+				System.out.println("employee daily wage:" +dailywage);
+				break;
+			case 2:
+				dailywage=wagehr*parttimehrs;
+				System.out.println("part time empoyee wage:" +dailywage);
+				break;
+			default:
+				System.out.println("employee is absent and salary will be 0");
 		}
 	}	
 			
